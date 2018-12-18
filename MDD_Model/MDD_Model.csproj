@@ -41,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MDD_accounts.cs" />
-    <Compile Include="MDD_dictionaries.cs" />
+    <Compile Include="MDD_accountsM.cs" />
+    <Compile Include="MDD_dictionariesM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -27,7 +27,7 @@ namespace MDD_BLL
         /// <summary>
         /// 增加一条数据
         /// </summary>
-        public bool Add(MDD_dictionaries model)
+        public bool Add(MDD_dictionariesM model)
         {
             return dal.Add(model);
         }
@@ -35,7 +35,7 @@ namespace MDD_BLL
         /// <summary>
         /// 更新一条数据
         /// </summary>
-        public bool Update(MDD_dictionaries model)
+        public bool Update(MDD_dictionariesM model)
         {
             return dal.Update(model);
         }
@@ -59,7 +59,7 @@ namespace MDD_BLL
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public MDD_dictionaries GetModel(string ID)
+        public MDD_dictionariesM GetModel(string ID)
         {
 
             return dal.GetModel(ID);
@@ -83,7 +83,7 @@ namespace MDD_BLL
         /// <summary>
         /// 获得数据列表
         /// </summary>
-        public List<MDD_dictionaries> GetModelList(string strWhere)
+        public List<MDD_dictionariesM> GetModelList(string strWhere)
         {
             DataSet ds = dal.GetList(strWhere);
             return DataTableToList(ds.Tables[0]);
@@ -91,13 +91,13 @@ namespace MDD_BLL
         /// <summary>
         /// 获得数据列表
         /// </summary>
-        public List<MDD_dictionaries> DataTableToList(DataTable dt)
+        public List<MDD_dictionariesM> DataTableToList(DataTable dt)
         {
-            List<MDD_dictionaries> modelList = new List<MDD_dictionaries>();
+            List<MDD_dictionariesM> modelList = new List<MDD_dictionariesM>();
             int rowsCount = dt.Rows.Count;
             if (rowsCount > 0)
             {
-                MDD_dictionaries model;
+                MDD_dictionariesM model;
                 for (int n = 0; n < rowsCount; n++)
                 {
                     model = dal.DataRowToModel(dt.Rows[n]);

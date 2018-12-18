@@ -34,7 +34,7 @@ namespace MDD_DAL
 		/// <summary>
 		/// 增加一条数据
 		/// </summary>
-		public bool Add(MDD_dictionaries model)
+		public bool Add(MDD_dictionariesM model)
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into MDD_dictionaries(");
@@ -70,7 +70,7 @@ namespace MDD_DAL
 		/// <summary>
 		/// 更新一条数据
 		/// </summary>
-		public bool Update(MDD_dictionaries model)
+		public bool Update(MDD_dictionariesM model)
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("update MDD_dictionaries set ");
@@ -154,7 +154,7 @@ namespace MDD_DAL
 		/// <summary>
 		/// 得到一个对象实体
 		/// </summary>
-		public MDD_dictionaries GetModel(string ID)
+		public MDD_dictionariesM GetModel(string ID)
 		{
 			
 			StringBuilder strSql=new StringBuilder();
@@ -164,7 +164,7 @@ namespace MDD_DAL
 					new SqlParameter("@ID", SqlDbType.VarChar,50)			};
 			parameters[0].Value = ID;
 
-			MDD_dictionaries model=new MDD_dictionaries();
+			MDD_dictionariesM model=new MDD_dictionariesM();
 			DataSet ds=DbHelperSQL.Query(strSql.ToString(),parameters);
 			if(ds.Tables[0].Rows.Count>0)
 			{
@@ -180,9 +180,9 @@ namespace MDD_DAL
 		/// <summary>
 		/// 得到一个对象实体
 		/// </summary>
-		public MDD_dictionaries DataRowToModel(DataRow row)
+		public MDD_dictionariesM DataRowToModel(DataRow row)
 		{
-			MDD_dictionaries model=new MDD_dictionaries();
+			MDD_dictionariesM model=new MDD_dictionariesM();
 			if (row != null)
 			{
 				if(row["ID"]!=null)

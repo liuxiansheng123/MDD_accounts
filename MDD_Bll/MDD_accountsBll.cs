@@ -26,7 +26,7 @@ namespace MDD_BLL
         /// <summary>
         /// 增加一条数据
         /// </summary>
-        public bool Add(MDD_accounts model)
+        public bool Add(MDD_accountsM model)
         {
             return dal.Add(model);
         }
@@ -34,7 +34,7 @@ namespace MDD_BLL
         /// <summary>
         /// 更新一条数据
         /// </summary>
-        public bool Update(MDD_accounts model)
+        public bool Update(MDD_accountsM model)
         {
             return dal.Update(model);
         }
@@ -58,7 +58,7 @@ namespace MDD_BLL
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public MDD_accounts GetModel(string Acc_Id)
+        public MDD_accountsM GetModel(string Acc_Id)
         {
 
             return dal.GetModel(Acc_Id);
@@ -82,7 +82,7 @@ namespace MDD_BLL
         /// <summary>
         /// 获得数据列表
         /// </summary>
-        public List<MDD_accounts> GetModelList(string strWhere)
+        public List<MDD_accountsM> GetModelList(string strWhere)
         {
             DataSet ds = dal.GetList(strWhere);
             return DataTableToList(ds.Tables[0]);
@@ -90,13 +90,13 @@ namespace MDD_BLL
         /// <summary>
         /// 获得数据列表
         /// </summary>
-        public List<MDD_accounts> DataTableToList(DataTable dt)
+        public List<MDD_accountsM> DataTableToList(DataTable dt)
         {
-            List<MDD_accounts> modelList = new List<MDD_accounts>();
+            List<MDD_accountsM> modelList = new List<MDD_accountsM>();
             int rowsCount = dt.Rows.Count;
             if (rowsCount > 0)
             {
-                MDD_accounts model;
+                MDD_accountsM model;
                 for (int n = 0; n < rowsCount; n++)
                 {
                     model = dal.DataRowToModel(dt.Rows[n]);

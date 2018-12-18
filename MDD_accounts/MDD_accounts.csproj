@@ -315,6 +315,16 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MDD_Bll\MDD_BLL.csproj">
+      <Project>{433ab9a3-4d9d-4e45-99d3-35cad8b64eb3}</Project>
+      <Name>MDD_BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MDD_Model\MDD_Model.csproj">
+      <Project>{f7ed11f7-71d0-4f6f-b9b1-2f8f363df92d}</Project>
+      <Name>MDD_Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

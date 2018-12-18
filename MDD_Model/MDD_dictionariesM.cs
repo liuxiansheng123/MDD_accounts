@@ -6,9 +6,9 @@ namespace MDD_Model
 	/// MDD_dictionaries:实体类(属性说明自动提取数据库字段的描述信息)
 	/// </summary>
 	[Serializable]
-	public partial class MDD_dictionaries
+	public partial class MDD_dictionariesM
 	{
-		public MDD_dictionaries()
+		public MDD_dictionariesM()
 		{}
 		#region Model
 		private string _id;
