@@ -2,53 +2,79 @@
 @{
     Layout = null;
 }
-
+@using MDD_Model;
+@{
+    MDD_accountsM models = new MDD_accountsM();
+    List<MDD_accountsM> _Accounts = ViewData["data"] as List<MDD_accountsM>;
+}
 <!DOCTYPE html>
+
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
     <script src="~/Scripts/jquery-3.3.1.js"></script>
-    <link href="~/layui/css/layui.css" rel="stylesheet" />
-    <script src="~/layui/layui.all.js"></script>
-    <style>
-        body {
-            margin: 10px;
-        }
-
-        .demo-carousel {
-            height: 200px;
-            line-height: 200px;
-            text-align: center;
-        }
-    </style>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-    <table class="layui-hide" id="table" lay-filter="test"></table>
-
-    <script>
-        layui.use('table', function () {
-            var table = layui.table;
-            //第一个实例
-            table.render({
-                elem: '#table'
-                , height: 500
-                , url: '/Home/nide' //数据接口
-                , page: true //开启分页
-                , cols: [[ //表头
-                    , { field: 'Acc_Id', title: 'ID', width: 80, sort: true, fixed: 'left' }
-                    , { field: 'Context', title: '消费内容', width: 120 }
-                    , { field: 'money', title: '消费金额', width: 120, sort: true, totalRow: true }
-                    , { field: 'Type', title: '消费类型', width: 120, sort: true }
-                    , { field: 'turnover', title: '剩余预算', width: 120, sort: true, totalRow: true }
-                    , { field: 'remark', title: '备注', width: 150 }
-                    , { field: 'CreateTime', title: '消费时间', width: 200 }
-                ]]
-            });
-
-        });
-
-    </script>
-
+    <div class="col-md-1"></div>
+    <div class="table-responsive col-md-9">
+        <table class="table active table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => models.Acc_Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => models.Context)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => models.money)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => models.Type)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => models.turnover)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => models.remark)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => models.CreateTime)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in _Accounts)
+                {
+                    <tr>
+                        <td>
+                            @item.Acc_Id
+                        </td>
+                        <td>
+                            @item.Context
+                        </td>
+                        <td>
+                            @item.money
+                        </td>
+                        <td>
+                            @item.Type
+                        </td>
+                        <td>
+                            @item.turnover
+                        </td>
+                        <td>
+                            @item.remark
+                        </td>
+                        <td>
+                            @item.CreateTime
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

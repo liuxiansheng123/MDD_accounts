@@ -21,6 +21,9 @@ namespace MDD_accounts.Controllers
 
         public ActionResult Index()
         {
+            List<MDD_accountsM> _Accounts = new List<MDD_accountsM>();
+            _Accounts = accountsBll.GetModelList("");
+            ViewData["data"] = _Accounts;
             return View();
         }
 

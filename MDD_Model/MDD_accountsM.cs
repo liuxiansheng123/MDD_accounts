@@ -1,5 +1,7 @@
 ﻿
 using System;
+using System.ComponentModel;
+
 namespace MDD_Model
 {
 	/// <summary>
@@ -17,58 +19,65 @@ namespace MDD_Model
 		private string _turnover;
 		private string _remark;
 		private DateTime? _createtime;
-		/// <summary>
-		/// 
-		/// </summary>
-		public string Acc_Id
+        /// <summary>
+        /// 
+        /// </summary>
+        [DisplayName("编码")]
+        public string Acc_Id
 		{
 			set{ _acc_id=value;}
 			get{return _acc_id;}
 		}
-		/// <summary>
-		/// 
-		/// </summary>
-		public string Context
+        /// <summary>
+        /// 
+        /// </summary>
+        [DisplayName("消费内容")]
+        public string Context
 		{
 			set{ _context=value;}
 			get{return _context;}
 		}
-		/// <summary>
-		/// 
-		/// </summary>
-		public decimal? money
+        /// <summary>
+        /// 
+        /// </summary>
+        [DisplayName("消费金额")]
+        public decimal? money
 		{
 			set{ _money=value;}
 			get{return _money;}
 		}
-		/// <summary>
-		/// 
-		/// </summary>
-		public string Type
+        /// <summary>
+        /// 
+        /// </summary>
+        [DisplayName("消费类型")]
+        public string Type
 		{
 			set{ _type=value;}
 			get{return _type;}
 		}
-		/// <summary>
-		/// 
-		/// </summary>
-		public string turnover
+        /// <summary>
+        /// 
+        /// </summary>
+        [DisplayName("剩余预算")]
+        public string turnover
 		{
 			set{ _turnover=value;}
 			get{return _turnover;}
 		}
-		/// <summary>
-		/// 
-		/// </summary>
-		public string remark
+        /// <summary>
+        /// 
+        /// </summary>
+        [DisplayName("备注")]
+        public string remark
 		{
 			set{ _remark=value;}
 			get{return _remark;}
 		}
-		/// <summary>
-		/// 
-		/// </summary>
-		public DateTime? CreateTime
+        /// <summary>
+        /// 
+        /// </summary>
+        [DisplayName("消费时间")]
+        public DateTime? CreateTime
 		{
 			set{ _createtime=value;}
 			get{return _createtime;}
