@@ -18,7 +18,10 @@ namespace MDD_accounts.Controllers
         private JsonSerializer serializer = new JsonSerializer();
         private StringWriter sw = new StringWriter();
 
-
+        /// <summary>
+        /// 列表显示页面
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             List<MDD_accountsM> _Accounts = new List<MDD_accountsM>();
@@ -27,13 +30,9 @@ namespace MDD_accounts.Controllers
             return View();
         }
 
-        public string nide()
+        public ActionResult Addaction()
         {
-            List<MDD_accountsM> _Accounts = new List<MDD_accountsM>();
-            _Accounts = accountsBll.GetModelList("");
-            
-            serializer.Serialize(new JsonTextWriter(sw), _Accounts);
-            return sw.GetStringBuilder().ToString();
+            return View();
         }
 
     }
