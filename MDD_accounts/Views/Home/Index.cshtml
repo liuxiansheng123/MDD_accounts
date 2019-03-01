@@ -7,74 +7,62 @@
     MDD_accountsM models = new MDD_accountsM();
     List<MDD_accountsM> _Accounts = ViewData["data"] as List<MDD_accountsM>;
 }
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <script src="~/Scripts/jquery-3.3.1.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-</head>
-<body>
-    <div class="col-md-1"></div>
-    <div class="table-responsive col-md-9">
-        <table class="table active table-bordered table-hover">
-            <thead>
+<div style="width:auto">
+    <table class="table active table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => models.Acc_Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => models.Context)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => models.money)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => models.Type)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => models.turnover)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => models.remark)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => models.CreateTime)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in _Accounts)
+            {
                 <tr>
-                    <th>
-                        @Html.DisplayNameFor(model => models.Acc_Id)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => models.Context)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => models.money)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => models.Type)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => models.turnover)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => models.remark)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => models.CreateTime)
-                    </th>
+                    <td>
+                        @item.Acc_Id
+                    </td>
+                    <td>
+                        @item.Context
+                    </td>
+                    <td>
+                        @item.money
+                    </td>
+                    <td>
+                        @item.Type
+                    </td>
+                    <td>
+                        @item.turnover
+                    </td>
+                    <td>
+                        @item.remark
+                    </td>
+                    <td>
+                        @item.CreateTime
+                    </td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in _Accounts)
-                {
-                    <tr>
-                        <td>
-                            @item.Acc_Id
-                        </td>
-                        <td>
-                            @item.Context
-                        </td>
-                        <td>
-                            @item.money
-                        </td>
-                        <td>
-                            @item.Type
-                        </td>
-                        <td>
-                            @item.turnover
-                        </td>
-                        <td>
-                            @item.remark
-                        </td>
-                        <td>
-                            @item.CreateTime
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-</body>
-</html>
+            }
+        </tbody>
+    </table>
+</div>
+

@@ -4,34 +4,41 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>王大喵的记账本</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <title>Miracle</title>
+    <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
 </head>
 <body>
     <div class="container body-content">
-        <div style="vertical-align: middle;">
-            <div id="bit-logoText" data-margin-top="1" style="position:relative;font-size:16px;  margin-top:1px;">
-                <div>
-                    <div class="logotext_inner">
-                        <div><span style="font-family:微软雅黑;"><span style="color: rgb(128, 128, 128);"><span style="font-size: 28px;">刘 &nbsp; 家&nbsp;&nbsp; 账&nbsp;&nbsp; 单</span></span></span></div>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10" align="center">
+                <a href="#">
+                    <img src="~/Img/log.png" />
+                </a>
             </div>
-        </div>
-        <div style="height:95%;width:100%">
-            @RenderBody()
         </div>
         <div>
             <hr />
-            <footer>
-                <p>&copy; @DateTime.Now.Year 使用版权归王大喵个人所有</p>
-            </footer>
+            <div align="center">
+                <ul>
+                    <li>
+                        123
+                    </li>
+                </ul>
+            </div>
+            <hr />
+        </div>
+        <div>
+            @RenderBody()
         </div>
     </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <div style="position:fixed;bottom:0px;z-index:99999;width:100%;text-align: center;">
+        <footer>
+            <p>&copy; @DateTime.Now.Year 使用版权归王大喵个人所有</p>
+        </footer>
+    </div>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
