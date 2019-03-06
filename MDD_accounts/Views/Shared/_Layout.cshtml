@@ -6,7 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miracle</title>
     <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
 
+        li {
+            display: inline;
+            float: left;
+        }
+
+        a {
+            display: block;
+            width: 60px;
+        }
+    </style>
 </head>
 <body>
     <div class="container body-content">
@@ -18,18 +34,20 @@
                 </a>
             </div>
         </div>
-        <div>
-            <hr />
-            <div align="center">
+        <div style="float:left;width:100%">
+            <div align="center" style="padding-top:5px;">
                 <ul>
-                    <li>
-                        123
-                    </li>
+                    <li><a href="#">132</a></li>
+                    <li><a>132</a></li>
+                    <li><a>132</a></li>
+                    <li><a>132</a></li>
                 </ul>
             </div>
-            <hr />
+            <div style="padding-top:1%">
+                <hr />
+            </div>
         </div>
-        <div>
+        <div  style="float:left;width:100%;padding-top:1%">
             @RenderBody()
         </div>
     </div>
