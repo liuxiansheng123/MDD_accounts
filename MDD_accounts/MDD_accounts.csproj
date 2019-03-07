@@ -167,6 +167,10 @@
     <Content Include="Content\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Content\bootstrap\js\bootstrap.js" />
     <Content Include="Content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\viewer\css\main.css" />
+    <Content Include="Content\viewer\css\viewer.css" />
+    <Content Include="Content\viewer\js\main.js" />
+    <Content Include="Content\viewer\js\viewer.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
